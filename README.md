@@ -18,22 +18,22 @@ Register with Docker Hub to ship images with container > image workflow which we
 ## Image > container workflow
 
 ### Clone working application
-`git clone git@github.com:dylannirvana/hello-docker.git`
+`git clone git@github.com:dylannirvana/hello-docker.git`  
 `cd hello-docker`
 
 ### Cat Dockerfile
 Using Linux, create and populate Dockerfile
-`cat > Dockerfile`
-`FROM node:alpine`
-`WORKDIR /app`
-`COPY . /app`
-`RUN npm i`
-`CMD ["node", "app.js"]`
+`cat > Dockerfile`  
+`FROM node:alpine`  
+`WORKDIR /app`  
+`COPY . /app`  
+`RUN npm i`  
+`CMD ["node", "app.js"]`  
 ctr-D to escape
 
-_NOTE: To view contents of a file and see you actually wrote to it using cat command _`cat filename`_ 
+NOTE: To view contents of a file and see you actually wrote to it using cat command _`cat filename`_ 
 
-_From_ is the most important piece of information here. You are building an image based on a particular Linux build (containing Node) from Docker Hub. You create a working directory, copy everything to it, run an npm install, and creating a run command called "node".
+By far, _from_ is the most important piece of information here. You are building an image based on a particular Linux build (containing Node) from Docker Hub. You create a working directory, copy everything to it, run an npm install, and creating a run command called "node".
 
 NOTE: To view application in code editor, type _`code .`_ (I had to configure this behavior in Visual Studio, but it is a fairly common syntax)
 
@@ -64,7 +64,7 @@ To update the image, you are going to have to ditch the processes, or containers
 Copy the container ID from _`docker ps`_. 
 
 Stop and remove that container
-You can type _`docker stop <container ID>_ and _then_ remove it, or just use the _force_ flag
+You can type _`docker stop <container ID>` and remove it, or just use the _force_ flag
 `docker rm -f <container ID>`
 
 Make these changes to the application:
