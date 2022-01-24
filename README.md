@@ -69,7 +69,7 @@ You can type _`docker stop <container ID>` and remove it, or just use the _force
 
 Make these changes to the application:
 `code src/static/js/app.js`
-On line 56 
+On line 56   
  `- <p className="text-center">No items yet! Add one above!</p>`    
 `+ <p className="text-center">You have no items yet! Add one above!</p>`
 
